@@ -25,7 +25,7 @@ parser.add_argument('--data_root', default='data', help='root directory for data
 parser.add_argument('--optimizer', default='adam', help='optimizer to train with')
 parser.add_argument('--niter', type=int, default=60, help='number of epochs to train for')
 parser.add_argument('--seed', default=1, type=int, help='manual seed')
-parser.add_argument('--epoch_size', type=int, default=5000, help='epoch size')
+parser.add_argument('--epoch_size', type=int, default=200, help='epoch size')
 parser.add_argument('--image_width', type=int, default=64, help='the height / width of the input image to network')
 parser.add_argument('--channels', default=1, type=int)
 parser.add_argument('--dataset', default='smmnist', help='dataset to train with')
@@ -291,19 +291,19 @@ for epoch in range(opt.niter):
 
 
 
-    if epoch % 10 == 0:
-        torch.save({
-            'encoder': encoder,
-            'frame_predictor': frame_predictor,
-            'opt': opt},
-            '%s/model_%s.pth' % (opt.log_dir,epoch))
+#     if epoch % 10 == 0:
+#         torch.save({
+#             'encoder': encoder,
+#             'frame_predictor': frame_predictor,
+#             'opt': opt},
+#             '%s/model_%s.pth' % (opt.log_dir,epoch))
 
 
-    torch.save({
-        'encoder': encoder,
-        'frame_predictor': frame_predictor,
-        'opt': opt},
-        '%s/model.pth' % opt.log_dir)
+#     torch.save({
+#         'encoder': encoder,
+#         'frame_predictor': frame_predictor,
+#         'opt': opt},
+#         '%s/model.pth' % opt.log_dir)
 
 
 

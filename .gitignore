@@ -1,0 +1,12 @@
+*.pdf
+*.pt
+*.pth
+*.gif
+*.mp4
+*.jpg
+*.jpeg
+*.png
+*.zip
+*.npy
+data/
+logs/
